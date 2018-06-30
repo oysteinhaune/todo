@@ -20,6 +20,7 @@ public class Controller {
     @FXML
     public void storeButton(ActionEvent event) {
         Button button = (Button) event.getSource();
+
         if (taskfield.getText().equals("")) {
             errorLabel.setTextFill(Color.web("#ff0000"));
             errorLabel.setText("Du må skrive inn noe");
@@ -35,8 +36,10 @@ public class Controller {
     @FXML
     public void deleteButton(ActionEvent event) {
         int selectedIdx = todoListView.getSelectionModel().getSelectedIndex();
+
         if (selectedIdx != -1) {
             todoListView.getItems().remove(selectedIdx);
+            errorLabel.setText("Slettet");
         }
         else {
             errorLabel.setTextFill(Color.web("#ff0000"));

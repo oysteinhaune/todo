@@ -39,6 +39,7 @@ public class Controller {
 
         if (selectedIdx != -1) {
             todoListView.getItems().remove(selectedIdx);
+            errorLabel.setTextFill(Color.web("#41d33c"));
             errorLabel.setText("Slettet");
         }
         else {

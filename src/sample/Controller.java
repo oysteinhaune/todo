@@ -6,7 +6,9 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
+
 
 
 public class Controller {
@@ -46,5 +48,10 @@ public class Controller {
             errorLabel.setTextFill(Color.web("#ffffff"));
             errorLabel.setText("Listen er tom eller ingenting er valgt.");
         }
+    }
+
+    @FXML
+    public void resetLabel(MouseEvent event) {
+        errorLabel.setText("");
     }
 }

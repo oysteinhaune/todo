@@ -22,12 +22,12 @@ public class Controller {
         Button button = (Button) event.getSource();
 
         if (taskfield.getText().equals("")) {
-            errorLabel.setTextFill(Color.web("#ff0000"));
+            errorLabel.setTextFill(Color.web("#ffffff"));
             errorLabel.setText("Du må skrive inn noe");
         }
         else {
             todoListView.getItems().add(taskfield.getText());
-            errorLabel.setTextFill(Color.web("#41d33c"));
+            errorLabel.setTextFill(Color.web("#ffffff"));
             taskfield.setText("");
             errorLabel.setText("Lagret");
         }
@@ -39,11 +39,11 @@ public class Controller {
 
         if (selectedIdx != -1) {
             todoListView.getItems().remove(selectedIdx);
-            errorLabel.setTextFill(Color.web("#41d33c"));
+            errorLabel.setTextFill(Color.web("#ffffff"));
             errorLabel.setText("Slettet");
         }
         else {
-            errorLabel.setTextFill(Color.web("#ff0000"));
+            errorLabel.setTextFill(Color.web("#ffffff"));
             errorLabel.setText("Listen er tom eller ingenting er valgt.");
         }
     }
